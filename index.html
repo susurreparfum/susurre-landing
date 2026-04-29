@@ -1612,10 +1612,10 @@
         </div>
       </div>
 
-      <form class="waitlist-form" id="waitlist-form" action="https://susurreparfum.beehiiv.com/subscribe" method="POST" novalidate>
+      <form class="waitlist-form" id="waitlist-form" action="https://formspree.io/f/xzdynawz" method="POST" novalidate>
         <input
           type="email"
-          name="email"
+          name="EMAIL"
           class="waitlist-input"
           placeholder="your email"
           required
@@ -1710,21 +1710,26 @@
     if (submitBtn) submitBtn.disabled = true;
 
     try {
-      // Beehiiv direct subscribe — use no-cors mode (response is opaque but request goes through)
-      await fetch(form.action, {
+      const response = await fetch(form.action, {
         method: 'POST',
         body: new FormData(form),
-        mode: 'no-cors'
+        headers: { 'Accept': 'application/json' }
       });
+
+      if (response.ok) {
+        formView.style.display = 'none';
+        successView.classList.add('active');
+      } else {
+        // Server error — re-enable form, show subtle error
+        input.style.borderColor = '#B8695C';
+        if (submitBtn) submitBtn.disabled = false;
+      }
     } catch (err) {
       console.error('Submit error:', err);
+      // Network error — still show success (don't break user experience)
+      formView.style.display = 'none';
+      successView.classList.add('active');
     }
-
-    // Always show success — no-cors mode doesn't return readable response,
-    // but the email submission will reach Beehiiv either way.
-    // (Network errors are extremely rare, so this is safe.)
-    formView.style.display = 'none';
-    successView.classList.add('active');
   });
 
   // Video + Phased Reveal
