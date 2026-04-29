@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>susurre · a private scent house · three fragrances arriving soon</title>
+<meta name="description" content="susurre is a private scent house. Three fragrances and a waitlist-only discovery set, arriving soon. Join for early access and notes from the founder.">
+<link rel="canonical" href="https://susurre.com/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2C1F1B">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://susurre.com/">
+<meta property="og:site_name" content="susurre">
+<meta property="og:title" content="susurre · a private scent house">
+<meta property="og:description" content="Three fragrances and a waitlist-only discovery set arriving soon.">
+<meta property="og:image" content="https://susurre.com/susurre-poster.jpg">
+<meta property="og:image:alt" content="susurre — a slow morning light on a zellige wall, the silhouette of a woman cast across it.">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="susurre · a private scent house">
+<meta name="twitter:description" content="Three fragrances and a waitlist-only discovery set arriving soon.">
+<meta name="twitter:image" content="https://susurre.com/susurre-poster.jpg">
+
+<!-- Structured Data: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "susurre",
+  "alternateName": "susurre parfum",
+  "url": "https://susurre.com",
+  "description": "susurre is a private scent house launching three fragrances and a waitlist-only discovery set.",
+  "founder": {
+    "@type": "Person",
+    "name": "the founder"
+  },
+  "sameAs": [
+    "https://instagram.com/susurreparfum",
+    "https://tiktok.com/@susurreparfum"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@susurre.com",
+    "contactType": "customer support"
+  }
+}
+</script>
+
+<!-- Structured Data: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "susurre",
+  "url": "https://susurre.com"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --walnut: #4A3428;
+    --walnut-deep: #3A2620;
+    --walnut-darker: #1F1612;
+    --cream: #F4E8D8;
+    --cream-pure: #F9F3EE;
+    --cream-shadow: #E8DCC8;
+    --honey: #E8A978;
+    --honey-light: #F4D2A8;
+    --terracotta: #B8695C;
+    --espresso: #2C1F1B;
+
+    --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--walnut-darker);
+    color: var(--cream-pure);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--terracotta);
+    color: var(--cream-pure);
+  }
+
+  /* ═══════════════════════════════════════════════
+     PERSISTENT NAV
+     ═══════════════════════════════════════════════ */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 24px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    transition: background 0.4s ease, padding 0.4s ease;
+  }
+
+  .nav.scrolled {
+    background: rgba(31, 22, 18, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 16px 40px;
+    border-bottom: 1px solid rgba(249, 243, 238, 0.08);
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(20px, 1.8vw, 24px);
+    letter-spacing: 0.2em;
+    color: var(--cream-pure);
+    text-decoration: none;
+    line-height: 1;
+    opacity: 0;
+    animation: navFade 0.8s ease-out 0.4s forwards;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav-cta {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--cream-pure);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid rgba(249, 243, 238, 0.4);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: navFade 0.8s ease-out 0.6s forwards;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+    background: rgba(31, 22, 18, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .nav-cta:hover {
+    background: var(--cream-pure);
+    color: var(--espresso);
+    border-color: var(--cream-pure);
+    text-shadow: none;
+  }
+
+  @keyframes navFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ═══════════════════════════════════════════════
+     HERO — FULL SCREEN VIDEO + BOTTOM CENTERED OVERLAY
+     ═══════════════════════════════════════════════ */
+  .hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--walnut-darker);
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  /* Animated placeholder while video loads */
+  .hero-video-placeholder {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 30%,
+        rgba(244, 210, 168, 0.4) 0%,
+        rgba(232, 169, 120, 0.22) 25%,
+        transparent 55%),
+      radial-gradient(ellipse at 30% 70%,
+        rgba(184, 105, 92, 0.20) 0%,
+        transparent 45%),
+      linear-gradient(135deg, var(--walnut) 0%, var(--walnut-darker) 100%);
+    animation: morningPulse 8s ease-in-out infinite;
+    transition: opacity 1.2s ease-out;
+    z-index: 0;
+  }
+
+  @keyframes morningPulse {
+    0%, 100% { filter: brightness(1); transform: scale(1); }
+    50% { filter: brightness(1.08); transform: scale(1.02); }
+  }
+
+  /* Bottom gradient mask — makes text readable while preserving video */
+  .hero-mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65%;
+    background: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(31, 22, 18, 0.0) 25%,
+      rgba(31, 22, 18, 0.25) 50%,
+      rgba(31, 22, 18, 0.55) 70%,
+      rgba(31, 22, 18, 0.82) 88%,
+      rgba(31, 22, 18, 0.92) 100%);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  /* Top subtle mask for nav readability */
+  .hero-mask-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 18%;
+    background: linear-gradient(to bottom,
+      rgba(31, 22, 18, 0.4) 0%,
+      transparent 100%);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  /* Text content — centered horizontally, positioned in lower 1/4 */
+  .hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding: 0 24px 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  .hero-content > * {
+    pointer-events: auto;
+  }
+
+  /* LOGO */
+  .hero-logo {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(64px, 8vw, 112px);
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: var(--cream-pure);
+    margin-bottom: 14px;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-logo-letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  body.reveal-logo .hero-logo-letter:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+  body.reveal-logo .hero-logo-letter:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+  body.reveal-logo .hero-logo-letter:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+  body.reveal-logo .hero-logo-letter:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+  body.reveal-logo .hero-logo-letter:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+  body.reveal-logo .hero-logo-letter:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+  body.reveal-logo .hero-logo-letter:nth-child(7) { opacity: 1; transform: translateY(0); transition-delay: 0.6s; }
+
+  /* PRONUNCIATION */
+  .hero-pronunciation {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(18px, 1.9vw, 26px);
+    letter-spacing: 0.16em;
+    color: var(--cream-pure);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    margin-bottom: 36px;
+    font-weight: 300;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+  }
+
+  body.reveal-pronunciation .hero-pronunciation {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* HEADLINE */
+  .hero-headline {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.4;
+    letter-spacing: 0.005em;
+    color: var(--cream-pure);
+    margin-bottom: 36px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+    max-width: 580px;
+  }
+
+  body.reveal-headline .hero-headline {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hero-headline .emph {
+    color: var(--honey-light);
+  }
+
+  /* CTA */
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--cream-pure);
+    text-decoration: none;
+    padding: 16px 32px;
+    background: rgba(31, 22, 18, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(249, 243, 238, 0.5);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out, background 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  body.reveal-cta .hero-cta {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hero-cta:hover {
+    background: var(--cream-pure);
+    color: var(--espresso);
+    border-color: var(--cream-pure);
+    text-shadow: none;
+  }
+
+  .hero-cta-arrow {
+    transition: transform 0.3s ease;
+    font-size: 13px;
+  }
+
+  .hero-cta:hover .hero-cta-arrow {
+    transform: translateX(4px);
+  }
+
+  /* Scroll cue */
+  .scroll-cue {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+    pointer-events: none;
+  }
+
+  body.reveal-cta .scroll-cue {
+    opacity: 0.5;
+  }
+
+  .scroll-cue-line {
+    display: block;
+    width: 1px;
+    height: 36px;
+    background: linear-gradient(to bottom,
+      rgba(249, 243, 238, 0.6) 0%,
+      rgba(249, 243, 238, 0) 100%);
+    animation: lineDrop 2.5s ease-in-out infinite;
+  }
+
+  @keyframes lineDrop {
+    0%, 100% { transform: scaleY(1); opacity: 0.5; }
+    50% { transform: scaleY(1.4); opacity: 0.8; }
+  }
+
+  /* ═══════════════════════════════════════════════
+     UNMUTE BUTTON — subtle bottom-right
+     ═══════════════════════════════════════════════ */
+  .sound-toggle {
+    position: absolute;
+    bottom: 28px;
+    right: 28px;
+    z-index: 5;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(249, 243, 238, 0.35);
+    background: rgba(31, 22, 18, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-out, background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    color: var(--cream-pure);
+    padding: 0;
+  }
+
+  body.reveal-cta .sound-toggle {
+    opacity: 0.7;
+  }
+
+  .sound-toggle:hover {
+    opacity: 1;
+    background: rgba(249, 243, 238, 0.15);
+    border-color: rgba(249, 243, 238, 0.6);
+    transform: scale(1.05);
+  }
+
+  .sound-toggle svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* SVG icons swap based on state */
+  .sound-toggle .icon-on { display: none; }
+  .sound-toggle.playing .icon-off { display: none; }
+  .sound-toggle.playing .icon-on { display: block; }
+
+  .sound-toggle-label {
+    position: absolute;
+    right: 56px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 12px;
+    color: var(--cream-pure);
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .sound-toggle:hover .sound-toggle-label {
+    opacity: 0.85;
+  }
+
+  @media (max-width: 480px) {
+    .sound-toggle {
+      width: 40px;
+      height: 40px;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .sound-toggle-label {
+      display: none;
+    }
+  }
+
+  /* ═══════════════════════════════════════════════
+     CHAPTER ONE — HINT SECTION
+     ═══════════════════════════════════════════════ */
+  .chapter {
+    background: var(--walnut);
+    color: var(--cream-pure);
+    padding: 140px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chapter::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 30%, rgba(232, 169, 120, 0.06) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 70%, rgba(184, 105, 92, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .chapter-wrap {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .chapter-eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--honey);
+    margin-bottom: 48px;
+  }
+
+  .chapter-title {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(28px, 3.4vw, 42px);
+    line-height: 1.25;
+    color: var(--cream-pure);
+    margin-bottom: 64px;
+  }
+
+  .chapter-sub {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(17px, 1.7vw, 21px);
+    line-height: 1.6;
+    color: var(--cream-pure);
+    opacity: 0.7;
+    margin-bottom: 72px;
+  }
+
+  .chapter-list {
+    list-style: none;
+    margin-bottom: 64px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .chapter-list li {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .chapter-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .chapter-list .num {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--honey);
+    opacity: 0.85;
+    margin-bottom: 10px;
+  }
+
+  .chapter-list .name {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(24px, 2.6vw, 32px);
+    line-height: 1.2;
+    color: var(--cream-pure);
+    margin-bottom: 8px;
+    letter-spacing: 0.005em;
+  }
+
+  .chapter-list .sub {
+    display: block;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(15px, 1.5vw, 17px);
+    line-height: 1.55;
+    color: var(--cream-pure);
+    opacity: 0.6;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .chapter-disclaimer {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(13px, 1.1vw, 14px);
+    color: var(--cream-pure);
+    opacity: 0.55;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  /* ═══════════════════════════════════════════════
+     PHILOSOPHY
+     ═══════════════════════════════════════════════ */
+  .philosophy {
+    background: var(--walnut-deep);
+    color: var(--cream-pure);
+    padding: 160px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .philosophy::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 70% 20%, rgba(232, 169, 120, 0.05) 0%, transparent 55%),
+      radial-gradient(ellipse at 20% 80%, rgba(184, 105, 92, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .philosophy-wrap {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .philosophy-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--honey);
+    margin-bottom: 48px;
+    font-weight: 500;
+  }
+
+  .philosophy-statement {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(34px, 4.8vw, 60px);
+    line-height: 1.18;
+    letter-spacing: -0.005em;
+    margin-bottom: 48px;
+  }
+
+  .philosophy-statement .emph {
+    color: var(--honey-light);
+  }
+
+  .philosophy-body {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(16px, 1.85vw, 21px);
+    line-height: 1.75;
+    opacity: 0.78;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .philosophy-body .break {
+    display: block;
+    margin-top: 14px;
+  }
+
+  /* ═══════════════════════════════════════════════
+     FOUNDER NOTE
+     ═══════════════════════════════════════════════ */
+  .founder {
+    background: var(--walnut);
+    color: var(--cream-pure);
+    padding: 140px 24px;
+    position: relative;
+  }
+
+  .founder-wrap {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .founder-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--honey);
+    margin-bottom: 50px;
+    font-weight: 500;
+  }
+
+  /* Layer 1: Intro paragraph - normal cream, baseline */
+  .founder-intro {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(18px, 1.95vw, 22px);
+    line-height: 1.65;
+    color: var(--cream-pure);
+    opacity: 0.85;
+    margin-bottom: 56px;
+  }
+
+  /* Layer 2: Hero pull quote - honey-light, larger, with side accent */
+  .founder-hero {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(26px, 3.2vw, 36px);
+    line-height: 1.35;
+    color: var(--honey-light);
+    margin: 0 auto 56px;
+    max-width: 540px;
+    padding: 14px 0;
+    position: relative;
+    letter-spacing: 0.005em;
+  }
+
+  /* Subtle accent: thin honey line above and below the hero quote */
+  .founder-hero::before,
+  .founder-hero::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--honey);
+    opacity: 0.5;
+    margin: 0 auto;
+  }
+
+  .founder-hero::before { margin-bottom: 28px; }
+  .founder-hero::after { margin-top: 28px; }
+
+  /* Layer 3: List - dimmer, slightly smaller, anaphora rhythm */
+  .founder-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 56px;
+    max-width: 480px;
+  }
+
+  .founder-list li {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(17px, 1.75vw, 20px);
+    line-height: 1.7;
+    color: var(--cream-pure);
+    opacity: 0.7;
+    margin-bottom: 10px;
+  }
+
+  .founder-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Layer 4: Resolution paragraph - cream, returning to baseline */
+  .founder-resolution {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(17px, 1.85vw, 21px);
+    line-height: 1.65;
+    color: var(--cream-pure);
+    opacity: 0.92;
+    margin-bottom: 48px;
+  }
+
+  /* Layer 5: Signature - honey, small uppercase letter-spacing */
+  .founder-sign {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--honey);
+    opacity: 0.85;
+    letter-spacing: 0.12em;
+  }
+
+  /* ═══════════════════════════════════════════════
+     WAITLIST
+     ═══════════════════════════════════════════════ */
+  .waitlist {
+    background: var(--cream);
+    color: var(--espresso);
+    padding: 140px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .waitlist::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(184, 105, 92, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 70%, rgba(232, 169, 120, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .waitlist-wrap {
+    position: relative;
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .waitlist-mark {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 26px;
+    letter-spacing: 0.22em;
+    color: var(--terracotta);
+    margin-bottom: 48px;
+  }
+
+  .waitlist-eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 32px;
+  }
+
+  .waitlist-title {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.2;
+    color: var(--espresso);
+    margin-bottom: 28px;
+  }
+
+  .waitlist-desc {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(15px, 1.6vw, 18px);
+    line-height: 1.7;
+    color: var(--espresso);
+    opacity: 0.72;
+    max-width: 460px;
+    margin: 0 auto 40px;
+  }
+
+  /* Waitlist incentives */
+  .waitlist-perks {
+    text-align: left;
+    max-width: 380px;
+    margin: 0 auto 48px;
+    padding: 28px 32px;
+    background: rgba(184, 105, 92, 0.06);
+    border-left: 1px solid var(--terracotta);
+  }
+
+  .waitlist-perks-title {
+    font-size: 9px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+
+  .waitlist-perks-list {
+    list-style: none;
+  }
+
+  .waitlist-perks-list li {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--espresso);
+    opacity: 0.85;
+    margin-bottom: 10px;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .waitlist-perks-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--terracotta);
+    opacity: 0.6;
+  }
+
+  .waitlist-perks-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .waitlist-spec {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(44, 31, 27, 0.12);
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--espresso);
+    opacity: 0.5;
+    text-align: center;
+  }
+
+  .waitlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .waitlist-input {
+    height: 60px;
+    padding: 0 24px;
+    background: transparent;
+    border: 1px solid rgba(44, 31, 27, 0.22);
+    color: var(--espresso);
+    font-family: var(--font-body);
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    transition: border-color 0.3s ease;
+    outline: none;
+  }
+
+  .waitlist-input::placeholder {
+    color: var(--espresso);
+    opacity: 0.4;
+    font-style: italic;
+    font-family: var(--font-display);
+  }
+
+  .waitlist-input:focus {
+    border-color: var(--terracotta);
+  }
+
+  .waitlist-submit {
+    height: 60px;
+    background: var(--terracotta);
+    border: none;
+    color: var(--cream-pure);
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.35s ease;
+  }
+
+  .waitlist-submit:hover {
+    background: var(--walnut);
+  }
+
+  .waitlist-submit::after {
+    content: '→';
+    margin-left: 12px;
+    font-size: 14px;
+    transition: transform 0.35s ease;
+    display: inline-block;
+  }
+
+  .waitlist-submit:hover::after {
+    transform: translateX(6px);
+  }
+
+  .waitlist-micro {
+    margin-top: 24px;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 12px;
+    color: var(--espresso);
+    opacity: 0.5;
+  }
+
+  .waitlist-success {
+    display: none;
+    text-align: center;
+  }
+
+  .waitlist-success.active {
+    display: block;
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .waitlist-success-mark {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(28px, 3.2vw, 38px);
+    color: var(--espresso);
+    margin-bottom: 16px;
+  }
+
+  .waitlist-success-sign {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--terracotta);
+    opacity: 0.8;
+  }
+
+  /* ═══════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════ */
+  .footer {
+    background: 
+      radial-gradient(ellipse 800px 300px at 50% 0%, 
+        rgba(232, 169, 120, 0.10) 0%, 
+        rgba(232, 169, 120, 0.04) 35%,
+        transparent 70%),
+      linear-gradient(to bottom,
+        var(--walnut) 0%,
+        var(--walnut) 60%,
+        var(--walnut-deep) 100%);
+    color: var(--cream-pure);
+    padding: 70px 40px 40px;
+    position: relative;
+  }
+
+  /* Subtle accent line at the very top */
+  .footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, 
+      transparent, 
+      rgba(232, 169, 120, 0.5), 
+      transparent);
+  }
+
+  .footer-wrap {
+    max-width: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Top row: brand left, contact right */
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 48px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(232, 169, 120, 0.18);
+  }
+
+  .footer-brand-block {
+    text-align: left;
+    flex-shrink: 0;
+  }
+
+  .footer-contact-block {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .footer-brand {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1;
+    letter-spacing: 0.10em;
+    margin-bottom: 10px;
+    color: var(--honey-light);
+    opacity: 0.92;
+  }
+
+  .footer-pronunciation {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.16em;
+    color: var(--cream-pure);
+    opacity: 0.6;
+    margin-bottom: 8px;
+    font-weight: 300;
+  }
+
+  .footer-tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--cream-pure);
+    opacity: 0.55;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 32px;
+  }
+
+  .footer-social {
+    text-decoration: none;
+    color: var(--cream-pure);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    opacity: 0.78;
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-social:hover {
+    opacity: 1;
+    color: var(--honey-light);
+  }
+
+  .footer-social-label {
+    font-size: 9px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .footer-social-handle {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 13px;
+    opacity: 0.78;
+  }
+
+  .footer-contact-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .footer-contact {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    opacity: 0.62;
+  }
+
+  .footer-contact a {
+    color: var(--cream-pure);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232, 169, 120, 0.3);
+    padding-bottom: 2px;
+    transition: border-color 0.3s, color 0.3s;
+  }
+
+  .footer-contact a:hover {
+    border-color: var(--honey-light);
+    color: var(--honey-light);
+  }
+
+  .footer-meta-link {
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--cream-pure);
+    text-decoration: none;
+    opacity: 0.55;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    font-weight: 400;
+  }
+
+  .footer-meta-link:hover {
+    opacity: 1;
+    color: var(--honey-light);
+  }
+
+  /* Bottom row: copyright */
+  .footer-copy {
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--cream-pure);
+    opacity: 0.42;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  /* ═══════════════════════════════════════════════
+     RESPONSIVE
+     ═══════════════════════════════════════════════ */
+  @media (max-width: 768px) {
+    .nav {
+      padding: 18px 20px;
+    }
+
+    .nav.scrolled {
+      padding: 14px 20px;
+    }
+
+    /* HERO — mobile-specific tweaks */
+    .hero {
+      height: 100vh; /* full viewport now that we have native portrait video */
+      min-height: 600px;
+    }
+
+    /* Native portrait video — no positioning hack needed */
+    .hero-video {
+      object-position: center center;
+    }
+
+    /* Slightly lighter bottom mask now that video is portrait native */
+    .hero-mask {
+      height: 55%;
+      background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(31, 22, 18, 0.0) 25%,
+        rgba(31, 22, 18, 0.30) 55%,
+        rgba(31, 22, 18, 0.65) 78%,
+        rgba(31, 22, 18, 0.88) 95%,
+        rgba(31, 22, 18, 0.92) 100%);
+    }
+
+    /* Top mask slightly lighter */
+    .hero-mask-top {
+      height: 18%;
+      background: linear-gradient(to bottom,
+        rgba(31, 22, 18, 0.45) 0%,
+        rgba(31, 22, 18, 0.10) 70%,
+        transparent 100%);
+    }
+
+    .hero-content {
+      padding: 0 24px 60px;
+    }
+
+    /* Tighter logo line spacing on mobile */
+    .hero-logo {
+      margin-bottom: 12px;
+    }
+
+    .hero-pronunciation {
+      margin-bottom: 28px;
+    }
+
+    .hero-headline {
+      margin-bottom: 28px;
+      max-width: 320px;
+    }
+
+    /* CHAPTER ONE mobile — restore breathing room */
+    .chapter, .philosophy, .founder, .waitlist {
+      padding: 100px 20px;
+    }
+
+    .chapter-title {
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 56px;
+      font-size: clamp(24px, 6.8vw, 30px);
+      text-wrap: balance;
+      line-height: 1.3;
+    }
+
+    .chapter-list {
+      max-width: 100%;
+    }
+
+    .chapter-list li {
+      margin-bottom: 36px;
+    }
+
+    .chapter-list .name {
+      font-size: 26px;
+    }
+
+    .chapter-list .sub {
+      max-width: 320px;
+      font-size: 15px;
+    }
+
+    .chapter-disclaimer {
+      max-width: 340px;
+      font-size: 13px;
+    }
+
+    /* PHILOSOPHY mobile */
+    .philosophy-statement {
+      margin-bottom: 36px;
+      font-size: clamp(28px, 8vw, 38px);
+    }
+
+    .philosophy-body {
+      font-size: 17px;
+    }
+
+    /* FOUNDER mobile */
+    .founder-quote {
+      font-size: 22px;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* WAITLIST mobile */
+    .waitlist-title {
+      font-size: clamp(28px, 7.5vw, 36px);
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .waitlist-perks {
+      max-width: 100%;
+      padding: 24px 22px;
+    }
+
+    .waitlist-perks-list li {
+      font-size: 14px;
+    }
+
+    .footer {
+      padding: 56px 20px 32px;
+    }
+
+    .footer-top {
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+      padding-bottom: 28px;
+      margin-bottom: 24px;
+    }
+
+    .footer-brand-block {
+      text-align: center;
+    }
+
+    .footer-contact-block {
+      text-align: center;
+      gap: 24px;
+    }
+
+    .footer-socials {
+      justify-content: center;
+      gap: 36px;
+    }
+
+    .footer-social {
+      align-items: center;
+    }
+
+    .footer-contact-row {
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav {
+      padding: 16px 18px;
+    }
+
+    /* Smaller, less heavy nav CTA on small phones */
+    .nav-cta {
+      padding: 7px 13px;
+      font-size: 9px;
+      letter-spacing: 0.22em;
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      letter-spacing: 0.18em;
+    }
+
+    /* Smaller sound toggle position */
+    .sound-toggle {
+      width: 38px;
+      height: 38px;
+      bottom: 18px;
+      right: 18px;
+    }
+
+    .sound-toggle-label {
+      display: none;
+    }
+
+    .hero-content {
+      padding: 0 22px 50px;
+    }
+
+    .hero-logo {
+      font-size: clamp(54px, 16vw, 72px);
+    }
+
+    .hero-pronunciation {
+      font-size: 17px;
+    }
+
+    .hero-headline {
+      font-size: 18px;
+      max-width: 280px;
+    }
+
+    .hero-cta {
+      padding: 14px 24px;
+      font-size: 9px;
+      letter-spacing: 0.32em;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .hero-video-placeholder { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════ PERSISTENT NAV ═══════ -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">susurre</a>
+  <a href="#waitlist" class="nav-cta">Join waitlist</a>
+</nav>
+
+<!-- ═══════ HERO — FULL VIDEO + CENTERED BOTTOM TEXT ═══════ -->
+<section class="hero">
+  <video
+    class="hero-video"
+    aria-label="susurre — a private scent house. Slow morning light on a zellige wall, the silhouette of a woman cast across it."
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    poster="susurre-poster.jpg">
+    <source src="susurre-morning-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+    <source src="susurre-morning-web.mp4" type="video/mp4">
+  </video>
+  <div class="hero-video-placeholder"></div>
+
+  <div class="hero-mask-top"></div>
+  <div class="hero-mask"></div>
+
+  <div class="hero-content">
+    <h1 class="hero-logo">
+      <span class="hero-logo-letter">s</span><span class="hero-logo-letter">u</span><span class="hero-logo-letter">s</span><span class="hero-logo-letter">u</span><span class="hero-logo-letter">r</span><span class="hero-logo-letter">r</span><span class="hero-logo-letter">e</span>
+    </h1>
+
+    <div class="hero-pronunciation">/ soo · surr /</div>
+
+    <p class="hero-headline">
+      A private scent house <span class="emph">arriving soon</span>.
+    </p>
+
+    <a href="#waitlist" class="hero-cta">
+      <span>Three scents · Join the waitlist</span>
+      <span class="hero-cta-arrow">→</span>
+    </a>
+  </div>
+
+  <button class="sound-toggle" id="sound-toggle" aria-label="Toggle sound">
+    <span class="sound-toggle-label">Hear it</span>
+    <!-- Muted icon (default) -->
+    <svg class="icon-off" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+      <line x1="23" y1="9" x2="17" y2="15"/>
+      <line x1="17" y1="9" x2="23" y2="15"/>
+    </svg>
+    <!-- Playing icon -->
+    <svg class="icon-on" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+      <path d="M15.54 8.46a5 5 0 010 7.07"/>
+      <path d="M19.07 4.93a10 10 0 010 14.14"/>
+    </svg>
+  </button>
+
+  <div class="scroll-cue">
+    <span class="scroll-cue-line"></span>
+  </div>
+</section>
+
+<!-- ═══════ CHAPTER ONE ═══════ -->
+<section class="chapter">
+  <div class="chapter-wrap">
+    <div class="chapter-eyebrow">Chapter One</div>
+
+    <h2 class="chapter-title">Three scents, in three quiet rooms.</h2>
+
+    <ul class="chapter-list">
+      <li>
+        <span class="num">No. 01</span>
+        <span class="name">Slow Morning</span>
+        <span class="sub">the way the sun stays warm, after she's gone.</span>
+      </li>
+      <li>
+        <span class="num">No. 02</span>
+        <span class="name">Half Said</span>
+        <span class="sub">the air finishes the sentence she didn't.</span>
+      </li>
+      <li>
+        <span class="num">No. 03</span>
+        <span class="name">Long After</span>
+        <span class="sub">the kind of presence the room won't admit is gone.</span>
+      </li>
+    </ul>
+
+    <p class="chapter-disclaimer">
+      Each scent is in its final months of resolving — in conversation with the fragrances we love, finished in a voice of our own.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════ PHILOSOPHY ═══════ -->
+<section class="philosophy">
+  <div class="philosophy-wrap">
+    <div class="philosophy-eyebrow">How we make</div>
+
+    <h2 class="philosophy-statement">
+      We don't invent.<br>
+      <span class="emph">We recognize.</span>
+    </h2>
+
+    <p class="philosophy-body">
+      A private scent house translating the language of niche perfumery — for women who already speak it fluently.
+      <span class="break">We live with each scent for months — sometimes years — until it stops trying to be something, and simply becomes it.</span>
+      <span class="break"><em>That's the version we release.</em></span>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════ FOUNDER NOTE ═══════ -->
+<section class="founder">
+  <div class="founder-wrap">
+    <div class="founder-eyebrow">From the Founder</div>
+
+    <p class="founder-intro">
+      I've always been sensitive to rooms — to the way a new place, a new person, or a new season of life can feel before you have words for it.
+    </p>
+
+    <p class="founder-hero">
+      Scent became the way<br>
+      I helped myself arrive.
+    </p>
+
+    <ul class="founder-list">
+      <li>A perfume for college.</li>
+      <li>A candle for a new apartment.</li>
+      <li>A fragrance for the version of myself I was trying to become.</li>
+    </ul>
+
+    <p class="founder-resolution">
+      susurre began from that instinct: to make scent not as decoration, but as a private atmosphere — one that helps you feel closer to yourself, wherever you are.
+    </p>
+
+    <div class="founder-sign">— the founder</div>
+  </div>
+</section>
+
+<!-- ═══════ WAITLIST ═══════ -->
+<section class="waitlist" id="waitlist">
+  <div class="waitlist-wrap">
+    <div class="waitlist-mark">susurre</div>
+    <div class="waitlist-eyebrow">The Waitlist</div>
+
+    <div id="form-view">
+      <h2 class="waitlist-title">
+        Enter Chapter One<br>
+        first.
+      </h2>
+
+      <p class="waitlist-desc">
+        Join the waitlist for early access to the first three scents, the waitlist-only Discovery Set, and notes from the founder as they resolve.
+      </p>
+
+      <div class="waitlist-perks">
+        <div class="waitlist-perks-title">Waitlist members receive</div>
+        <ul class="waitlist-perks-list">
+          <li>First access, 48 hours before public launch</li>
+          <li>Discovery Set at $24 (regular $32) — for waitlist only</li>
+          <li>Founder's notes during the resolving process</li>
+        </ul>
+        <div class="waitlist-spec">
+          Discovery Set 5ml × 3  ·  Eau de parfum 50ml  ·  Arriving soon
+        </div>
+      </div>
+
+      <form class="waitlist-form" id="waitlist-form" action="https://formspree.io/f/xzdynawz" method="POST" novalidate>
+        <input
+          type="email"
+          name="EMAIL"
+          class="waitlist-input"
+          placeholder="your email"
+          required
+          aria-label="Email address"
+        >
+        <button type="submit" class="waitlist-submit">
+          Enter the chapter
+        </button>
+      </form>
+
+      <p class="waitlist-micro">
+        No spam. No countdowns. Just one note when it's time.
+      </p>
+    </div>
+
+    <div class="waitlist-success" id="success-view">
+      <div class="waitlist-success-mark">
+        We'll whisper when ready.
+      </div>
+      <div class="waitlist-success-sign">
+        — susurre
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+  <div class="footer-wrap">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <div class="footer-brand">susurre</div>
+        <div class="footer-pronunciation">/ soo · surr /</div>
+        <div class="footer-tagline">A private scent house.</div>
+      </div>
+
+      <div class="footer-contact-block">
+        <div class="footer-socials">
+          <a href="https://instagram.com/susurreparfum" class="footer-social" target="_blank" rel="noopener">
+            <span class="footer-social-label">Instagram</span>
+            <span class="footer-social-handle">@susurreparfum</span>
+          </a>
+          <a href="https://tiktok.com/@susurreparfum" class="footer-social" target="_blank" rel="noopener">
+            <span class="footer-social-label">TikTok</span>
+            <span class="footer-social-handle">@susurreparfum</span>
+          </a>
+        </div>
+
+        <div class="footer-contact-row">
+          <div class="footer-contact">
+            <a href="mailto:hello@susurre.com">hello@susurre.com</a>
+          </div>
+          <a href="/privacy.html" class="footer-meta-link">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      © 2026 susurre parfum · A private scent house · Eau de parfum arriving soon
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav background on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // Waitlist form
+  const form = document.getElementById('waitlist-form');
+  const formView = document.getElementById('form-view');
+  const successView = document.getElementById('success-view');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const input = form.querySelector('input[type="email"]');
+    const submitBtn = form.querySelector('.waitlist-submit');
+    const email = input.value;
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      input.style.borderColor = '#B8695C';
+      return;
+    }
+
+    // Disable button during submit
+    if (submitBtn) submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        formView.style.display = 'none';
+        successView.classList.add('active');
+      } else {
+        // Server error — re-enable form, show subtle error
+        input.style.borderColor = '#B8695C';
+        if (submitBtn) submitBtn.disabled = false;
+      }
+    } catch (err) {
+      console.error('Submit error:', err);
+      // Network error — still show success (don't break user experience)
+      formView.style.display = 'none';
+      successView.classList.add('active');
+    }
+  });
+
+  // Video + Phased Reveal
+  const video = document.querySelector('.hero-video');
+  const placeholder = document.querySelector('.hero-video-placeholder');
+
+  // Reveal timeline (relative to video start):
+  //   0.2s   logo letters begin rising
+  //   1.0s   pronunciation
+  //   1.5s   headline tagline
+  //   2.2s   CTA + scroll cue
+  let revealStarted = false;
+
+  function startReveal() {
+    if (revealStarted) return;
+    revealStarted = true;
+    setTimeout(() => document.body.classList.add('reveal-logo'), 200);
+    setTimeout(() => document.body.classList.add('reveal-pronunciation'), 1000);
+    setTimeout(() => document.body.classList.add('reveal-headline'), 1500);
+    setTimeout(() => document.body.classList.add('reveal-cta'), 2200);
+  }
+
+  // Fallback if video never plays
+  const fallbackTimer = setTimeout(() => {
+    if (!revealStarted) startReveal();
+  }, 500);
+
+  if (video) {
+    video.addEventListener('playing', () => {
+      if (placeholder) placeholder.style.opacity = '0';
+      clearTimeout(fallbackTimer);
+      startReveal();
+    });
+    video.addEventListener('error', () => {
+      video.style.display = 'none';
+      if (placeholder) placeholder.style.opacity = '1';
+      clearTimeout(fallbackTimer);
+      startReveal();
+    });
+  }
+
+  // Sound toggle — unmute on user click with smooth fade
+  const soundToggle = document.getElementById('sound-toggle');
+  let isMuted = true;
+  let fadeInterval = null;
+
+  function fadeAudio(target, duration = 1500) {
+    if (fadeInterval) clearInterval(fadeInterval);
+    if (!video) return;
+
+    const start = video.volume;
+    const startTime = performance.now();
+
+    fadeInterval = setInterval(() => {
+      const elapsed = performance.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // ease-out curve
+      const eased = 1 - Math.pow(1 - progress, 3);
+      video.volume = start + (target - start) * eased;
+
+      if (progress >= 1) {
+        clearInterval(fadeInterval);
+        fadeInterval = null;
+      }
+    }, 16);
+  }
+
+  if (soundToggle && video) {
+    soundToggle.addEventListener('click', () => {
+      if (isMuted) {
+        // Unmute: fade in
+        video.volume = 0;
+        video.muted = false;
+        soundToggle.classList.add('playing');
+        soundToggle.querySelector('.sound-toggle-label').textContent = 'Quiet';
+        fadeAudio(0.7, 1500);
+        isMuted = false;
+        try { localStorage.setItem('susurre-sound', 'on'); } catch(e) {}
+      } else {
+        // Mute: fade out
+        soundToggle.classList.remove('playing');
+        soundToggle.querySelector('.sound-toggle-label').textContent = 'Hear it';
+        fadeAudio(0, 1000);
+        setTimeout(() => {
+          if (!isMuted) return; // user changed mind
+          video.muted = true;
+        }, 1000);
+        isMuted = true;
+        try { localStorage.setItem('susurre-sound', 'off'); } catch(e) {}
+      }
+    });
+
+    // Don't auto-restore on revisit (browsers will block anyway)
+    // But update label if user previously enabled sound
+    try {
+      const saved = localStorage.getItem('susurre-sound');
+      if (saved === 'on') {
+        // Show that sound was on before — they can re-enable with one click
+        soundToggle.querySelector('.sound-toggle-label').textContent = 'Hear it again';
+      }
+    } catch(e) {}
+  }
+</script>
+
+</body>
+</html>
